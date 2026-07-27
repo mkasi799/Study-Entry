@@ -2,27 +2,27 @@
 // QUALTRICS LINK
 // =========================
 
-const qualtricsURL = "https://google.com";
+const qualtricsURL = "https://mtroyal.ca1.qualtrics.com/jfe/form/SV_6gOLMVUcweYF23I";
 
 
 
 // =========================
-// SESSION TIMES
+// SESSION START TIMES
+// Every session automatically lasts 5 minutes.
+// These times are available EVERY DAY.
 // =========================
 
 const sessions = [
 
-    {
-        date: "2026-07-20",
-        start: "00:00",
-        end: "23:59"
-    },
+    "10:00",
 
-    {
-        date: "2026-08-04",
-        start: "10:00",
-        end: "10:05"
-    }
+    "12:30",
+
+    "15:30",
+
+    "17:00",
+
+    "19:30"
 
 ];
 
@@ -32,58 +32,53 @@ const sessions = [
 // BUTTON
 // =========================
 
-document.getElementById("continueButton").addEventListener("click", checkTime);
+document
+    .getElementById("continueButton")
+    .addEventListener("click", checkTime);
 
 
 
-function checkTime(){
+// =========================
+// CHECK TIME
+// =========================
+
+function checkTime() {
 
     const now = new Date();
 
-    const today =
-        now.getFullYear() + "-" +
-        String(now.getMonth()+1).padStart(2,"0") + "-" +
-        String(now.getDate()).padStart(2,"0");
-
     const currentMinutes =
-        now.getHours()*60 +
+        now.getHours() * 60 +
         now.getMinutes();
 
     let allowed = false;
 
-    for(const session of sessions){
+    for (const startTime of sessions) {
 
-        if(session.date !== today){
+        const start = convertToMinutes(startTime);
 
-            continue;
+        const end = start + 5;
 
-        }
-
-        const start =
-            convertToMinutes(session.start);
-
-        const end =
-            convertToMinutes(session.end);
-
-        if(currentMinutes >= start &&
-            currentMinutes <= end){
+        if (currentMinutes >= start &&
+            currentMinutes <= end) {
 
             allowed = true;
+            break;
 
         }
 
     }
 
-    if(allowed){
+    const message = document.getElementById("message");
+
+    if (allowed) {
+
+        message.textContent = "";
 
         window.location.href = qualtricsURL;
 
-    }
+    } else {
 
-    else{
-
-        document.getElementById("message").textContent =
-        "You cannot join.";
+        message.textContent = "You cannot join.";
 
     }
 
@@ -91,11 +86,15 @@ function checkTime(){
 
 
 
-function convertToMinutes(time){
+// =========================
+// CONVERT HH:MM TO MINUTES
+// =========================
+
+function convertToMinutes(time) {
 
     const parts = time.split(":");
 
-    return Number(parts[0])*60 +
+    return Number(parts[0]) * 60 +
            Number(parts[1]);
 
 }
