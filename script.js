@@ -74,7 +74,19 @@ function checkTime() {
 
         message.textContent = "";
 
-        window.location.href = qualtricsURL;
+        // Get the participant's Sona ID from the URL
+        const params = new URLSearchParams(window.location.search);
+        const surveyCode = params.get("id");
+
+        // Build the Qualtrics URL
+        let redirectURL = qualtricsURL;
+
+        if (surveyCode) {
+            redirectURL += "?id=" + encodeURIComponent(surveyCode);
+        }
+
+        // Redirect to Qualtrics
+        window.location.href = redirectURL;
 
     } else {
 
