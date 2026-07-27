@@ -13,7 +13,7 @@ const qualtricsURL = "https://google.com";
 const sessions = [
 
     {
-        date: "2026-07-27",
+        date: "2026-07-20",
         start: "00:00",
         end: "23:59"
     },
