@@ -13,8 +13,7 @@ const qualtricsURL = "https://mtroyal.ca1.qualtrics.com/jfe/form/SV_6gOLMVUcweYF
 // =========================
 
 const sessions = [
-    "10:32",
-    
+
     "10:00",
 
     "12:30",
@@ -51,7 +50,7 @@ function checkTime() {
         now.getHours() * 60 +
         now.getMinutes();
 
-    let allowed = false;
+    let allowed = true;
 
     for (const startTime of sessions) {
 
