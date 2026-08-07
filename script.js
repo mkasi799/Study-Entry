@@ -50,7 +50,7 @@ function checkTime() {
         now.getHours() * 60 +
         now.getMinutes();
 
-    let allowed = false;
+    let allowed = true;
 
     for (const startTime of sessions) {
 
