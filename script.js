@@ -90,7 +90,7 @@ function checkTime() {
 
     } else {
 
-        message.textContent = "You cannot join.";
+        message.textContent = "Unfortunately, the check-in window for your scheduled session has closed. As a result, you will not receive credit for this session. Please wait 1-2 days before registering for this study again to allow for your participation status to be updated.";
 
     }
 
