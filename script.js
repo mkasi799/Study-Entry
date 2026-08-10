@@ -15,8 +15,6 @@ const qualtricsURL = "https://mtroyal.ca1.qualtrics.com/jfe/form/SV_6gOLMVUcweYF
 const sessions = [
 
     "10:00",
-
-    "12:05",
     
     "12:30",
 
