@@ -61,7 +61,7 @@ function checkTime() {
         if (currentMinutes >= start &&
             currentMinutes <= end) {
 
-            allowed = true;
+            allowed = false;
             break;
 
         }
