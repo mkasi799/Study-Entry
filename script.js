@@ -14,15 +14,19 @@ const qualtricsURL = "https://mtroyal.ca1.qualtrics.com/jfe/form/SV_6gOLMVUcweYF
 
 const sessions = [
 
-    "10:00",
+    "8:30",
     
+    "9:30",
+
     "12:30",
+
+    "15:00",
 
     "15:30",
 
-    "17:00",
+    "18:00",
 
-    "19:30"
+    "18:30"
 
 ];
 
