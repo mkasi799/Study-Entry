@@ -84,3 +84,12 @@ button:hover{
     min-height:24px;
 
 }
+
+#instructions {
+    margin-bottom: 30px;
+}
+
+#instructions::before,
+#instructions::after {
+    content: none !important;
+}
