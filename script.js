@@ -2,7 +2,7 @@
 // QUALTRICS LINK
 // =========================
 
-const qualtricsURL = "https://mtroyal.ca1.qualtrics.com/jfe/form/SV_6gOLMVUcweYF23I";
+const qualtricsURL = "https://mtroyal.ca1.qualtrics.com/jfe/form/SV_e3BPdoi25DfE71Y";
 
 
 
@@ -16,37 +16,37 @@ const sessions = [
 
     "8:30",
 
-    "9:30",
+    "9:00",
 
-    "10:00",
+    "9:30",
 
     "10:30",
 
     "11:00",
 
-    "11:30",
-
-    "12:30",
-
     "13:30",
 
     "14:00",
 
-    "15:00",
-
-    "15:30",
+    "14:30",
 
     "16:30",
 
     "17:00",
 
-    "17:30",
+    "17:45",
 
     "18:00",
 
     "18:30",
 
-    "20:00"
+    "19:00",
+
+    "20:00",
+
+    "20:15",
+
+    "20:30"
 
 ];
 
